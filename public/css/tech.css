@@ -68,7 +68,8 @@ h5 {
 
 .page {
     background-color: rgb(206, 203, 203);
-    padding: 20px;
+    padding: 5px;
+    margin-top: -20px;
 }
 
 .header .navbar-nav .has-submenu ul {
