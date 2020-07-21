@@ -3794,6 +3794,14 @@ input[type="button"].btn-block {
   border-bottom-left-radius: 0;
 }
 
+.form-control {
+  margin-bottom: 10px;
+}
+
+.file-btn{
+  margin-top: 10px;
+}
+
 .custom-control {
   position: relative;
   display: block;

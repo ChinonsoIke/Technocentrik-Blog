@@ -1,4 +1,7 @@
 @extends('layouts.bloglayout')
+
+@section('title', 'Technocentrik | Blog')
+
 @section('content')
 
 <div class="row">

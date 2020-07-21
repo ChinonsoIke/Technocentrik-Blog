@@ -1,4 +1,7 @@
 @extends('admin.layouts.dashboarddefault')
+
+@section('title', 'Admin | Tags')
+
 @section('content')
 
     <div class="content-wrapper">

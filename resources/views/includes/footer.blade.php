@@ -5,7 +5,7 @@
                 <div class="widget">
                     <div class="footer-text text-left">
                         <a href="index.html"><h2 class="widget-title">techno<strong>Centrik</strong></h2></a>
-                        <p>technoCentrik is a technology blog, we sharing marketing, news and gadget articles.</p>
+                        <p>Technocentrik is a technology blog aimed at keeping you abreast with the happenings in the technology industry in Africa and accross the globe.</p>
                     </div><!-- end footer-text -->
                 </div><!-- end widget -->
             </div><!-- end col -->
@@ -16,7 +16,7 @@
                     <div class="link-widget">
                         <ul>
                             @foreach ($categs as $categ)
-                                <li><a href="{{route('posts.category', $categ->id)}}">{{$categ->name}} <span>(21)</span></a></li>
+                                <li><a href="{{route('posts.category', $categ->id)}}">{{$categ->name}} <span>({{count($categ->posts)}})</span></a></li>
                             @endforeach
                         </ul>
                     </div><!-- end link-widget -->
@@ -29,7 +29,7 @@
                     <div class="link-widget">
                         <ul>
                             <li><a href="/about">About us</a></li>
-                            <li><a href="#">Advertising</a></li>
+                            <!-- <li><a href="#">Advertising</a></li> -->
                         </ul>
                     </div><!-- end link-widget -->
                 </div><!-- end widget -->

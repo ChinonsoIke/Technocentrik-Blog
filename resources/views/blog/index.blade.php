@@ -1,4 +1,7 @@
 @extends('layouts.bloglayout')
+
+@section('title', 'Technocentrik | Blog')
+
 @section('content')
 
 <div class="row">
@@ -23,7 +26,7 @@
                 <p>{{substr(strip_tags($post->body), 0, 300)}}{{strlen(strip_tags($post->body)) > 250 ? "[...]" : ""}}</p>
                 <!-- <small class="firstsmall">{{$post->category}}</small> -->
                 <small>Published: {{ date('M j, Y', strtotime($post->created_at)) }}</small>
-                <small>by Matilda</small>
+                <small>by {{$post->author ?? ""}}</small>
                 <a href="{{route('blog.show', $post->slug)}}" class="btn btn-primary">Read more</a>
             </div><!-- end meta -->
         </div><!-- end blog-box -->

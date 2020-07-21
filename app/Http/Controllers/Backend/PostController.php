@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Post;
 use App\Category;
 use App\Tag;
+use App\User;
 use Purifier;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -53,6 +54,7 @@ class PostController extends Controller
         //validate
         $this->validate($request, [
             'title'=>'required|max:255',
+            'author'=>'required|max:255',
             'slug'=>'required|alpha_dash|min:5|max:255|unique:posts,slug',
             'category_id'=>'required|integer',
             'body'=>'required',
@@ -65,6 +67,7 @@ class PostController extends Controller
         $post->slug=$request->slug;
         $post->category_id= $request->category_id;
         $post->body=Purifier::clean($request->body);
+        $post->author= $request->author;
 
         //save our image
         if ($request->hasFile('featured_image')) {
@@ -138,7 +141,8 @@ class PostController extends Controller
             "title"=>"required|max:255",
             'slug'=>"required|alpha_dash|min:5|max:255|unique:posts,slug,$id",
             'category_id'=>'required|integer',
-            "body"=>"required"
+            "body"=>"required",
+            'author'=>'required|max:255'
         ]);
 
         //save to db
@@ -148,6 +152,7 @@ class PostController extends Controller
         $post->body= Purifier::clean($request->input('body'));
         $post->slug= $request->input('slug');
         $post->category_id= $request->category_id;
+        $post->author= $request->author;
 
         if ($request->hasFile('featured_image')) {
             $image= $request->file('featured_image');
@@ -198,8 +203,7 @@ class PostController extends Controller
     }
 
     public function getCategory($id) {
-        $category= Category::find($id)->with('posts')
-        ->first();
+        $category= Category::find($id);
 
 
         return view('categories.index', ['category'=>$category]);

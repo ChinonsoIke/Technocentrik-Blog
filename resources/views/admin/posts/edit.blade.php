@@ -1,5 +1,7 @@
 @extends('admin.layouts.dashboarddefault')
 
+@section('title', 'Admin | Edit Post')
+
 @section('stylesheets')
 
     {!! Html::style('css/select2.min.css') !!}
@@ -28,6 +30,9 @@
 
                         {{ Form::label('slug', 'Slug:') }}
                         {{ Form::text('slug', null, ["class"=>"form-control"]) }}
+
+                        {{ Form::label('author', 'Author Name:') }}
+                        {{ Form::text('author', null, ["class"=>"form-control"]) }}
 
                         {{ Form::label('category_id', 'Category:') }}
                         {{ Form::select('category_id', $categories, null, ["class"=>"form-control"]) }}

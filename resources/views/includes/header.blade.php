@@ -13,30 +13,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="{{ Request::is('/blog') ? 'nav-link active' :  'nav-link' }}" href="/blog">Blog</a>
-                    </li>                  
-                    <li class="nav-item">
-                        <a class="nav-link" href="tech-category-02.html">Videos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tech-category-03.html">Reviews</a>
                     </li>
                     <li class="nav-item">
                         <a class="{{ Request::is('/contact') ? 'nav-link active' :  'nav-link' }}" href="/contact">Contact Us</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav mr-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-rss"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-android"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-apple"></i></a>
-                    </li>
-                </ul>
             </div>
-            <a href="{{route('login')}}" class="btn_1 d-none d-lg-block">{{ __('Login') }}</a>
         </nav>
     </div><!-- end container-fluid -->
 </header><!-- end market-header -->

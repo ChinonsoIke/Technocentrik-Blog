@@ -1,5 +1,7 @@
 @extends('admin.layouts.dashboarddefault')
 
+@section('title', 'Admin | Delete Comment')
+
 @section('content')
     <div class="row">
         <div class="col-md-8 offset-md-2">

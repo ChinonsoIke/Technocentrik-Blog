@@ -23,7 +23,7 @@ Route::post('/contact', 'ContactController@store');
 Route::get('/blog', 'BlogController@index')->name('blog.index');
 Route::get('/blog/{slug}', 'BlogController@show')->name('blog.show');
 
-Route::get('/categories/{id}', 'Backend\PostController@getCategory')->name('posts.category');
+Route::get('/posts/categories/{id}', 'Backend\PostController@getCategory')->name('posts.category');
 
 Route::post('/comments/{post_id}', 'CommentsController@store')->name('comments.store');
 Route::delete('/comments/{id}', 'CommentsController@destroy')->name('comments.destroy');
@@ -45,7 +45,7 @@ Route::group(['prefix'=>'admin', 'namespace'=>'Backend'], function () {
 });
 
 Auth::routes([
-    //'register'=>false
+    'register'=>false
 ]);
 
 Route::get('/home', 'HomeController@index')->name('home');

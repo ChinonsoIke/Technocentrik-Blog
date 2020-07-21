@@ -1,5 +1,7 @@
 @extends('layouts.home')
 
+@section('title', 'Technocentrik | Login')
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

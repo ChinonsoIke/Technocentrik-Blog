@@ -12,8 +12,7 @@
     <meta name="author" content="">
     
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}" type="image/x-icon" >
-    <link rel="apple-touch-icon" href="{{asset('images/apple-touch-icon.png')}}">
+    <!-- <link rel="shortcut icon" href="/" type="image/x-icon" > -->
     
     <!-- Design fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 

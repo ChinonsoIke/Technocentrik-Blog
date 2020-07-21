@@ -1,5 +1,7 @@
 @extends('admin.layouts.dashboarddefault')
 
+@section('title', 'Admin | Create New Post')
+
 @section('stylesheets')
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
@@ -42,9 +44,14 @@
                         <form action="{{route('admin.posts.store')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             
-                            <input type="text" name="title" class="form-control" placeholder="Title:">
+                            <label for="title">Title:</label>
+                            <input type="text" name="title" class="form-control">
 
-                            <input type="text" name="slug" class="form-control" placeholder="Slug:">
+                            <label for="author">Author Name:</label>
+                            <input type="text" name="author" class="form-control">
+
+                            <label for="slug">Slug:</label>
+                            <input type="text" name="slug" class="form-control">
 
                             <label for="category_id">Category:</label>
                             <select name="category_id" class="form-control">
@@ -60,7 +67,7 @@
                                 @endforeach
                             </select>
                             <label name="featured_image">Upload Featured Image:</label>
-                            <input type="file" name="featured_image">
+                            <input type="file" name="featured_image" class="file-btn">
 
                             <hr>
 
