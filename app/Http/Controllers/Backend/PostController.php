@@ -58,7 +58,9 @@ class PostController extends Controller
             'slug'=>'required|alpha_dash|min:5|max:255|unique:posts,slug',
             'category_id'=>'required|integer',
             'body'=>'required',
-            'featured_image'=>'sometimes|image'
+            'featured_image'=>'sometimes|image',
+            'meta_keywords'=>'required',
+            'meta_description'=>'required'
         ]);
 
         //store in db
@@ -68,6 +70,8 @@ class PostController extends Controller
         $post->category_id= $request->category_id;
         $post->body=Purifier::clean($request->body);
         $post->author= $request->author;
+        $post->meta_keywords= $request->meta_keywords;
+        $post->meta_description= $request->meta_description;
 
         //save our image
         if ($request->hasFile('featured_image')) {
@@ -142,7 +146,9 @@ class PostController extends Controller
             'slug'=>"required|alpha_dash|min:5|max:255|unique:posts,slug,$id",
             'category_id'=>'required|integer',
             "body"=>"required",
-            'author'=>'required|max:255'
+            'author'=>'required|max:255',
+            'meta_keywords'=>'required',
+            'meta_description'=>'required'
         ]);
 
         //save to db
@@ -153,6 +159,8 @@ class PostController extends Controller
         $post->slug= $request->input('slug');
         $post->category_id= $request->category_id;
         $post->author= $request->author;
+        $post->meta_keywords= $request->meta_keywords;
+        $post->meta_description= $request->meta_description;
 
         if ($request->hasFile('featured_image')) {
             $image= $request->file('featured_image');

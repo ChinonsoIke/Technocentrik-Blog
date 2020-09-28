@@ -41,7 +41,23 @@
                         {{ Form::select('tags[]', $tags, null, ["class"=>"form-control select2-multi", "multiple"=>"multiple"]) }}
 
                         <label name="featured_image" enctype="multipart/form-data">Update Featured Image:</label>
-                        <input type="file" name="featured_image">
+                        <input type="file" name="featured_image"><hr>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Meta Tags</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label>Keywords</label>
+                                    <input name="meta_keywords" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <input name="meta_description" class="form-control">
+                                </div>
+                            </div>
+                        </div>
 
                         {{ Form::label('body', 'Body:') }}
                         {{ Form::textarea('body', null, ["class"=>"form-control"]) }}

@@ -1,6 +1,8 @@
 @extends('layouts.bloglayout')
 
-@section('title', 'Technocentrik | Blog')
+@section('title', $post->title)
+@section('meta_keywords', $post->meta_keywords)
+@section('meta_description', $post->meta_description)
 
 @section('content')
 

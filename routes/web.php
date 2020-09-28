@@ -44,6 +44,8 @@ Route::group(['prefix'=>'admin', 'namespace'=>'Backend'], function () {
     });
 });
 
+Route::get('sitemap.xml', 'SitemapController@index');
+
 Auth::routes([
     'register'=>false
 ]);

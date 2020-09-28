@@ -7,9 +7,10 @@
     
     <!-- Site Metas -->
     <title>@yield('title')</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords" content="@yield('meta_keywords')">
+    <meta name="description" content="@yield('meta_description')">
     <meta name="author" content="">
+    <link rel="canonical" href="{{url()->current()}}">
     
     <!-- Site Icons -->
     <!-- <link rel="shortcut icon" href="/" type="image/x-icon" > -->
