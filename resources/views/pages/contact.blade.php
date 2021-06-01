@@ -9,7 +9,7 @@
                 <form method="POST" action="/contact">
                     @csrf
                     <h1 class="text-center">Contact Us</h1>
-                    <p class="text-center">Get in touch with us with any enquirires you have.</p>
+                    <p class="text-center">Get in touch with us with any enquiries you have.</p>
                     <input class="form-control" name="name" type="text" placeholder="Enter your name:">
                     <input class="form-control" name="email" type="text" placeholder="Enter E-mail:">
                     <input class="form-control" name="subject" type="text" placeholder="Enter Message Subject:">
